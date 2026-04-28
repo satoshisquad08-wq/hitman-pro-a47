@@ -1,1 +1,175 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Hitman Pro A-47 | Premium Trading System</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"><script src="https://cdn.jsdelivr.net/npm/chart.js"></script><style>* {margin: 0;padding: 0;box-sizing: border-box;font-family: 'Inter', sans-serif;}body {background: radial-gradient(circle at top, #0d1117, #000000);color: #e6edf3;overflow-x: hidden;}.navbar {display: flex;justify-content: space-between;align-items: center;padding: 20px 60px;background: rgba(255,255,255,0.03);backdrop-filter: blur(10px);border-bottom: 1px solid rgba(255,255,255,0.05);position: sticky;top: 0;z-index: 1000;}.logo {font-size: 18px;font-weight: 700;color: #00ff99;letter-spacing: 1px;}.nav-links a {color: #c9d1d9;margin-left: 25px;text-decoration: none;font-size: 14px;}.nav-links a:hover {color: #00ff99;}.hero {text-align: center;padding: 90px 20px 40px;}.hero h1 {font-size: 54px;background: linear-gradient(90deg, #00ff99, #00c3ff);-webkit-background-clip: text;-webkit-text-fill-color: transparent;}.hero p {margin-top: 15px;font-size: 18px;color: #8b949e;}.cta-btn {margin-top: 30px;display: inline-block;padding: 14px 30px;background: linear-gradient(90deg, #00ff99, #00c3ff);color: #000;font-weight: 700;border-radius: 10px;text-decoration: none;}.chart-section {max-width: 1100px;margin: 40px auto;padding: 20px;}.chart-card {background: rgba(255,255,255,0.03);border: 1px solid rgba(255,255,255,0.05);border-radius: 16px;padding: 20px;backdrop-filter: blur(10px);}canvas {width: 100% !important;height: 400px !important;}.section {padding: 60px 20px;display: grid;grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));gap: 20px;max-width: 1100px;margin: auto;}.card {background: rgba(255,255,255,0.03);border: 1px solid rgba(255,255,255,0.05);border-radius: 16px;padding: 25px;backdrop-filter: blur(10px);}.card h2 {color: #00ff99;font-size: 18px;margin-bottom: 10px;}.card p {color: #8b949e;font-size: 14px;}.contact {text-align: center;padding: 80px 20px;}.contact-box {max-width: 600px;margin: auto;padding: 30px;background: rgba(255,255,255,0.03);border: 1px solid rgba(255,255,255,0.05);border-radius: 16px;}footer {text-align: center;padding: 20px;font-size: 12px;color: #6e7681;border-top: 1px solid rgba(255,255,255,0.05);}</style></head><body><div class="navbar"><div class="logo">Hitman Pro A-47</div><div class="nav-links"><a href="#chart">Live Chart</a><a href="#features">Features</a><a href="#contact">VIP Access</a></div></div><div class="hero"><h1>Next-Gen Automated Trading</h1><p>AI-powered execution • Real-time market structure • Institutional-grade system</p><a class="cta-btn" href="#contact">Get VIP Access</a></div><div class="chart-section" id="chart"><div class="chart-card"><h2 style="color:#00ff99; margin-bottom:10px;">Live Market Chart</h2><canvas id="tradeChart"></canvas></div></div><div class="section" id="features"><div class="card"><h2>AI Execution Engine</h2><p>Adaptive trading logic reacting to market volatility in real time.</p></div><div class="card"><h2>Risk Control System</h2><p>Protects capital with dynamic drawdown and exposure management.</p></div><div class="card"><h2>24/7 Automation</h2><p>Continuous execution without downtime or manual intervention.</p></div><div class="card"><h2>Secure Infrastructure</h2><p>You retain full control of your trading account at all times.</p></div></div><div class="contact" id="contact"><div class="contact-box"><h2 style="color:#00ff99;">VIP Access</h2><p>WhatsApp: 072 803 0096 / 079 192 9215</p><p>Telegram: @Satoshi_Px</p><p>Powered by EAConnect</p></div></div><footer>© 2026 Hitman Pro A-47 | Premium Trading Infrastructure</footer><script>const ctx = document.getElementById('tradeChart').getContext('2d');const data = {labels: Array.from({length: 20}, (_, i) => i),datasets: [{label: 'Price Movement',data: Array.from({length: 20}, () => Math.random() * 100 + 1000),borderColor: '#00ff99',tension: 0.4,fill: false}]};const config = {type: 'line',data,options: {responsive: true,animation: {duration: 1000},plugins: {legend: { display: false }},scales: {x: { display: false },y: { display: true }}}};const tradeChart = new Chart(ctx, config);setInterval(() => {tradeChart.data.datasets[0].data.shift();tradeChart.data.datasets[0].data.push(Math.random() * 100 + 1000);tradeChart.update();}, 1500);</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HITMAN PRO A-47 - Trading Platform</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Inter,sans-serif}
+    body{background:#0b0f1a;color:#fff;overflow-x:hidden}header{
+  padding:18px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(255,255,255,0.03);
+  position:sticky;top:0;backdrop-filter:blur(10px);
+  z-index:1000;
+}
+
+.logo{color:#00d4ff;font-weight:700;font-size:20px}
+
+nav a{
+  margin-left:18px;
+  color:#aaa;
+  text-decoration:none;
+  cursor:pointer;
+}
+
+nav a:hover{color:#00d4ff}
+
+.page{display:none;padding:60px 40px}
+.active{display:block}
+
+.hero{
+  text-align:center;
+  padding:80px 20px;
+  background:radial-gradient(circle at top,#14233f,#0b0f1a);
+}
+
+h1{font-size:42px;margin-bottom:10px}
+p{color:#aaa;max-width:700px;margin:10px auto}
+
+.btn{
+  padding:12px 24px;
+  background:#00d4ff;
+  border:none;
+  color:#000;
+  font-weight:700;
+  border-radius:8px;
+  cursor:pointer;
+  margin-top:20px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:rgba(255,255,255,0.05);
+  padding:20px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.08);
+}
+
+.card h3{color:#00d4ff;margin-bottom:10px}
+
+input{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border-radius:8px;
+  border:none;
+  background:#111827;
+  color:#fff;
+}
+
+.center{text-align:center}
+
+.section-title{
+  margin-bottom:20px;
+  color:#00d4ff;
+  font-size:24px;
+}
+
+.status{
+  color:#00ff99;
+  font-weight:600;
+}
+
+  </style>
+</head>
+<body><header>
+  <div class="logo">HITMAN PRO A-47</div>
+  <nav>
+    <a onclick="showPage('home')">Home</a>
+    <a onclick="showPage('dashboard')">Dashboard</a>
+    <a onclick="showPage('signals')">Signals</a>
+    <a onclick="showPage('pricing')">Pricing</a>
+    <a onclick="showPage('login')">Login</a>
+    <a onclick="showPage('contact')">Contact</a>
+  </nav>
+</header><!-- HOME --><section id="home" class="page active">
+  <div class="hero">
+    <h1>HITMAN PRO A-47</h1>
+    <p>Next-generation automated trading platform with AI execution engine, risk management system, and live market signal processing.</p>
+    <button class="btn" onclick="showPage('login')">Enter Platform</button>
+  </div>
+</section><!-- DASHBOARD --><section id="dashboard" class="page">
+  <h2 class="section-title">Live Trading Dashboard</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Account Balance</h3>
+      <p class="status">$12,450.00 (Demo Mode)</p>
+    </div>
+    <div class="card">
+      <h3>Active Systems</h3>
+      <p>3 AI Trading Bots Running</p>
+    </div>
+    <div class="card">
+      <h3>Performance</h3>
+      <p>Win Rate: 87.4%</p>
+    </div>
+    <div class="card">
+      <h3>System Status</h3>
+      <p class="status">ONLINE - AI ENGINE ACTIVE</p>
+    </div>
+  </div>
+</section><!-- SIGNALS --><section id="signals" class="page">
+  <h2 class="section-title">AI Signal Engine</h2>
+  <div class="card">
+    <h3>EUR/USD</h3>
+    <p>BUY signal detected - Confidence 82%</p>
+  </div>
+  <div class="card">
+    <h3>XAU/USD</h3>
+    <p>SELL signal - High volatility detected</p>
+  </div>
+  <div class="card">
+    <h3>GBP/JPY</h3>
+    <p>WAIT - Market stabilization in progress</p>
+  </div>
+</section><!-- PRICING --><section id="pricing" class="page">
+  <h2 class="section-title">Subscription Plans</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Starter</h3>
+      <p>Signal access + basic dashboard</p>
+    </div>
+    <div class="card">
+      <h3>Pro</h3>
+      <p>AI automation + risk engine access</p>
+    </div>
+    <div class="card">
+      <h3>Elite VIP</h3>
+      <p>Full system access + priority AI execution</p>
+    </div>
+  </div>
+</section><!-- LOGIN --><section id="login" class="page center">
+  <h2>Secure Login</h2>
+  <input type="text" placeholder="Username" />
+  <input type="password" placeholder="Password" />
+  <button class="btn">Login</button>
+</section><!-- CONTACT --><section id="contact" class="page center">
+  <h2>Contact Support</h2>
+  <p>WhatsApp: 072 803 0096 / 079 192 9215</p>
+  <p>Telegram: @Satoshi_Px</p>
+</section><script>
+function showPage(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+</script></body>
+</html>
