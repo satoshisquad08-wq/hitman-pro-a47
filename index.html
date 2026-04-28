@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hitman Pro A-47 | Premium Trading System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #0d1117, #000000);
+      color: #e6edf3;
+      overflow-x: hidden;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: rgba(255,255,255,0.03);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 18px;
+      font-weight: 700;
+      color: #00ff99;
+      letter-spacing: 1px;
+    }
+
+    .nav-links a {
+      color: #c9d1d9;
+      margin-left: 25px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      color: #00ff99;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 90px 20px 40px;
+    }
+
+    .hero h1 {
+      font-size: 54px;
+      background: linear-gradient(90deg, #00ff99, #00c3ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      margin-top: 15px;
+      font-size: 18px;
+      color: #8b949e;
+    }
+
+    .cta-btn {
+      margin-top: 30px;
+      display: inline-block;
+      padding: 14px 30px;
+      background: linear-gradient(90deg, #00ff99, #00c3ff);
+      color: #000;
+      font-weight: 700;
+      border-radius: 10px;
+      text-decoration: none;
+    }
+
+    .chart-section {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .chart-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 20px;
+      backdrop-filter: blur(10px);
+    }
+
+    canvas {
+      width: 100% !important;
+      height: 400px !important;
+    }
+
+    .section {
+      padding: 60px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 25px;
+      backdrop-filter: blur(10px);
+    }
+
+    .card h2 {
+      color: #00ff99;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #8b949e;
+      font-size: 14px;
+    }
+
+    .contact {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .contact-box {
+      max-width: 600px;
+      margin: auto;
+      padding: 30px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 16px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      color: #6e7681;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">Hitman Pro A-47</div>
+    <div class="nav-links">
+      <a href="#chart">Live Chart</a>
+      <a href="#features">Features</a>
+      <a href="#contact">VIP Access</a>
+    </div>
+  </div>
+
+  <div class="hero">
+    <h1>Next-Gen Automated Trading</h1>
+    <p>AI-powered execution • Real-time market structure • Institutional-grade system</p>
+    <a class="cta-btn" href="#contact">Get VIP Access</a>
+  </div>
+
+  <div class="chart-section" id="chart">
+    <div class="chart-card">
+      <h2 style="color:#00ff99; margin-bottom:10px;">Live Market Chart</h2>
+      <canvas id="tradeChart"></canvas>
+    </div>
+  </div>
+
+  <div class="section" id="features">
+    <div class="card">
+      <h2>AI Execution Engine</h2>
+      <p>Adaptive trading logic reacting to market volatility in real time.</p>
+    </div>
+    <div class="card">
+      <h2>Risk Control System</h2>
+      <p>Protects capital with dynamic drawdown and exposure management.</p>
+    </div>
+    <div class="card">
+      <h2>24/7 Automation</h2>
+      <p>Continuous execution without downtime or manual intervention.</p>
+    </div>
+    <div class="card">
+      <h2>Secure Infrastructure</h2>
+      <p>You retain full control of your trading account at all times.</p>
+    </div>
+  </div>
+
+  <div class="contact" id="contact">
+    <div class="contact-box">
+      <h2 style="color:#00ff99;">VIP Access</h2>
+      <p>WhatsApp: 072 803 0096 / 079 192 9215</p>
+      <p>Telegram: @Satoshi_Px</p>
+      <p>Powered by EAConnect</p>
+    </div>
+  </div>
+
+  <footer>
+    © 2026 Hitman Pro A-47 | Premium Trading Infrastructure
+  </footer>
+
+  <script>
+    const ctx = document.getElementById('tradeChart').getContext('2d');
+
+    const data = {
+      labels: Array.from({length: 20}, (_, i) => i),
+      datasets: [{
+        label: 'Price Movement',
+        data: Array.from({length: 20}, () => Math.random() * 100 + 1000),
+        borderColor: '#00ff99',
+        tension: 0.4,
+        fill: false
+      }]
+    };
+
+    const config = {
+      type: 'line',
+      data,
+      options: {
+        responsive: true,
+        animation: {
+          duration: 1000
+        },
+        plugins: {
+          legend: { display: false }
+        },
+        scales: {
+          x: { display: false },
+          y: { display: true }
+        }
+      }
+    };
+
+    const tradeChart = new Chart(ctx, config);
+
+    setInterval(() => {
+      tradeChart.data.datasets[0].data.shift();
+      tradeChart.data.datasets[0].data.push(Math.random() * 100 + 1000);
+      tradeChart.update();
+    }, 1500);
+  </script>
+</body>
+</html>
